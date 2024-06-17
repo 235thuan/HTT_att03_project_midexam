@@ -33,5 +33,10 @@ class UserRoleSeeder extends Seeder
             $user->role_id = $adminRole->id;
             $user->save();
         }
+
+        User::factory()->count(10)->create([
+            'role_id' => $userRole->id,
+        ]);
+
     }
 }

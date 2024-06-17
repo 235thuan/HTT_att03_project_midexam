@@ -17,7 +17,6 @@ class CheckRole
         if (!$request->user() || $request->user()->role->name !== $role) {
             abort(403, 'Unauthorized');
         }
-
         return $next($request);
     }
 }
