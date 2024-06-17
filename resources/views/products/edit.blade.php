@@ -8,6 +8,9 @@
 <body>
 <div class="container">
     <h1 class="mt-5">Edit Product</h1>
+    <div class="mt-2 d-flex justify-content-end">
+        <a href="{{ route('products.index') }}" class="btn btn-primary">View All Products</a>
+    </div>
     <form action="{{ route('products.update', $product->id) }}" method="POST">
         @csrf
         @method('PUT')
